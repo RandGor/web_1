@@ -1,5 +1,5 @@
 ﻿<?php
-	//header('Content-Type: text/html; charset=utf-8');
+	@header('Content-Type: text/html; charset=utf-8');
 	ob_start();
 	include("secret_vars.php");
 	ob_end_clean();
@@ -13,7 +13,8 @@
 		echo(json_encode($out));
 	}
 
-	
+	//$mysqli
+
 	if($res = $mysqli->query("SELECT `category`, `name`, `text`, `date` FROM `comments` WHERE `category`=$category ORDER BY `id` DESC")){
 		while($obj = $res->fetch_object()){
 			$out['comments'][] = $obj;	

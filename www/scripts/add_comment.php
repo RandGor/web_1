@@ -1,5 +1,5 @@
 ﻿<?php
-	header('Content-Type: text/html; charset=utf-8');
+	@header('Content-Type: text/html; charset=utf-8');
 	ob_start();
 	include("secret_vars.php");
 	ob_end_clean();
@@ -9,7 +9,7 @@
 	$user_name = urldecode($_POST['name']);
 	$user_comment = urldecode($_POST['comment']);
 	$date = date('j.n.Y');
-	$ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
+	$ip = "127.0.0.1";
 	
 
 	if(strlen($user_category) == 0 || strlen($user_name) == 0 || strlen($user_comment) == 0 || $user_category!=0 && $user_category!=1){

@@ -1,5 +1,5 @@
 ﻿<?php
-	header('Content-Type: text/html; charset=utf-8');
+	@header('Content-Type: text/html; charset=utf-8');
 	ob_start();
 	include("secret_vars.php");
 	ob_end_clean();

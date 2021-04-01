@@ -1,5 +1,5 @@
 ﻿<?php
-	$mysqli = new mysqli("localhost", "user", "passpass", "web1");
+	$mysqli = new mysqli("db", "user", "passpass", "myDb");
 	$mysqli->set_charset("utf8");
 
 	$salt = "...salt";
